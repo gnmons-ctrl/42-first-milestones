@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 18:14:50 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/10 11:30:12 by nlovius          ###   ########.fr       */
+/*   Created: 2026/04/10 11:38:24 by nlovius           #+#    #+#             */
+/*   Updated: 2026/04/10 12:01:02 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	i = ft_strlen(src);
-	if (i)
-		return (-1);
-
-	while (j < size)
-	{
-		
-	}
-
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	if (s[i] == c)
+		return ((char *)&s[i]);
+	return (NULL);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+{
+	char	str[] = "abcdef";
+
+	printf("%s\n", ft_strchr(str, 'c'));
+}*/

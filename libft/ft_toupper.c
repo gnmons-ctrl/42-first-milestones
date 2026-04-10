@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 18:14:50 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/10 11:30:12 by nlovius          ###   ########.fr       */
+/*   Created: 2026/04/10 11:30:38 by nlovius           #+#    #+#             */
+/*   Updated: 2026/04/10 11:35:27 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-size_t	ft_strlen(const char *s);
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_toupper(int c)
 {
-	size_t	i;
-	size_t	j;
-
-	i = ft_strlen(src);
-	if (i)
-		return (-1);
-
-	while (j < size)
-	{
-		
-	}
-
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
