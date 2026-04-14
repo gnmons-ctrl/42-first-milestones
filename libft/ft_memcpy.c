@@ -6,11 +6,9 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 09:25:16 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/09 11:13:00 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/13 11:02:56 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

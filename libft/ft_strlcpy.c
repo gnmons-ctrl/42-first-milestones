@@ -6,13 +6,9 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 14:40:47 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/09 18:13:07 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/13 11:16:27 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <unistd.h>
-
-size_t	ft_strlen(const char *s);*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

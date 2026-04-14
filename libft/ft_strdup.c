@@ -1,31 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/10 15:18:49 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/13 11:59:10 by nlovius          ###   ########.fr       */
+/*   Created: 2026/04/14 12:54:11 by nlovius           #+#    #+#             */
+/*   Updated: 2026/04/14 15:25:40 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s)
 {
-	int	i;
+	size_t	len;
+	char	*dup;
+	int		i;
 
-	i = (int)ft_strlen(s) + 1;
-	while (i >= 0 && s[i] != c)
-		i--;
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return ((void *)0);
+	i = 0;
+	len = ft_strlen(s);
+	dup = (char *)malloc(len * sizeof(char));
+	if (dup == NULL)
+		return (dup);
+	while (s[i])
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = s[i];
+	return (dup);
 }
 
 /*#include <stdio.h>
+#include <string.h>
+
 int	main(void)
 {
-	printf("%s\n", ft_strrchr("abcdaef", 'z'));
+	char	str[] = "blabla bar baz";
+	char	*test1;
+	char	*test2;
+
+	test1 = strdup(str);
+	test2 = ft_strdup(str);
+	printf("strdup: %s\n", test1);
+	printf("ft_strdup: %s\n", test2);
+	free(test1);
+	free(test2);
 }*/

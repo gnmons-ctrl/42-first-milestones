@@ -6,11 +6,9 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 11:13:28 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/09 16:00:56 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/13 11:15:35 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

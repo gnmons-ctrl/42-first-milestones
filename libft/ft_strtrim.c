@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/10 15:18:49 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/13 11:59:10 by nlovius          ###   ########.fr       */
+/*   Created: 2026/04/14 16:23:46 by nlovius           #+#    #+#             */
+/*   Updated: 2026/04/14 16:52:02 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strtrim(char const *s, char const *set)
 {
-	int	i;
-
-	i = (int)ft_strlen(s) + 1;
-	while (i >= 0 && s[i] != c)
-		i--;
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return ((void *)0);
+	
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%s\n", ft_strrchr("abcdaef", 'z'));
-}*/

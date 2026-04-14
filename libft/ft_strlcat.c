@@ -6,13 +6,9 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 18:14:50 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/10 11:30:12 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/13 11:17:03 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
