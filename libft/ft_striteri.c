@@ -6,7 +6,7 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 13:14:23 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/16 13:45:41 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/17 13:55:51 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 void    my_test_callback(unsigned int i, char *c)
 {
@@ -41,4 +41,4 @@ int     main(void)
         printf("Original string: %s\n", str);
         ft_striteri(str, my_test_callback);
         printf("Mapped string:   %s\n", str);
-}
+}*/

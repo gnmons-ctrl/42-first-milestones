@@ -6,18 +6,22 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 11:38:24 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/10 12:01:02 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/20 14:39:35 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	chr;
 
 	i = 0;
-	while (s[i] && s[i] != c)
+	chr = (unsigned char)c;
+	while (s[i] && s[i] != chr)
 		i++;
-	if (s[i] == c)
+	if (s[i] == chr)
 		return ((char *)&s[i]);
 	return (NULL);
 }

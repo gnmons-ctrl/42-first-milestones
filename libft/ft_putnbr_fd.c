@@ -6,7 +6,7 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 14:00:36 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/16 14:31:35 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/17 17:41:58 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	ft_putnbr_fd(int n, int fd)
 		nb = (unsigned int)n;
 	if (nb > 9)
 		ft_putnbr_fd(nb / 10, fd);
-	ft_putchar_fd("0123456789"[nb % 10], fd);
+	ft_putchar_fd((nb % 10) + '0', fd);
 }

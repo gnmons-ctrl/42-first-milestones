@@ -6,22 +6,25 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 09:25:16 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/13 11:02:56 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/20 15:23:39 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
 	char	*d;
 	char	*s;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	d = (char *)dest;
 	s = (char *)src;
-	while (i < n)
+	while (n > 0)
 	{
-		d[i] = s[i];
-		i++;
+		d[n - 1] = s[n - 1];
+		n--;
 	}
 	return (d);
 }
@@ -37,7 +40,7 @@ int	main(void)
 	char	dest2[] = "ooooooooooooo";
 
 	printf("%s ====>", src);
-	memcpy(&src[2], src, 5);
+	memcpy(&src[2], src2, 5);
 	printf(" %s\n", &src[2]);
 	printf("%s ====>", src2);
 	ft_memcpy(&src2[2], src2, 5);

@@ -6,7 +6,7 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 13:59:52 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/16 12:50:14 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/17 13:52:34 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ char	**ft_split(char const *s, char c)
 	return (splitted);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int	main(void)
@@ -123,4 +123,4 @@ int	main(void)
 	}
 	free_all(test0);
 	free_all(test1);
-}
+}*/

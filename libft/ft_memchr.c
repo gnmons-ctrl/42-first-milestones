@@ -6,7 +6,7 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 16:25:23 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/13 13:48:19 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/20 12:23:03 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,31 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
 	unsigned char	*ptr;
+	unsigned char	chr;
 
 	ptr = (unsigned char *)s;
-	i = 0;
-	while (ptr[i] && ptr[i] != c && i < n)
-		i++;
-	if (ptr[i] == c)
-		return (&ptr[i]);
+	chr = (unsigned char)c;
+	while (n > 0)
+	{
+		if (*ptr == chr)
+			return ((void *)ptr);
+		ptr++;
+		n--;
+	}
 	return (NULL);
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	(void)ac;
 	unsigned char	*ptr;
+	int	tab[] = {-49, 49, 1, -1, 0, -2, 2};
 
-	ptr = (unsigned char *)ft_memchr("abcdeazyx", 'z', 20);
+	ptr = (unsigned char *)ft_memchr(tab, -1, 20);
+	printf("%s\n", ptr);
+	ptr = (unsigned char *)memchr(tab, -1, 20);
 	printf("%s\n", ptr);
 }*/

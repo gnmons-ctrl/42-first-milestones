@@ -6,9 +6,11 @@
 /*   By: nlovius <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 11:13:28 by nlovius           #+#    #+#             */
-/*   Updated: 2026/04/13 11:15:35 by nlovius          ###   ########.fr       */
+/*   Updated: 2026/04/20 15:21:09 by nlovius          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -18,6 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*s;
 	size_t	n_underflow;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	i = 0;
 	sign = 1;
 	n_underflow = n + (dest > src);
